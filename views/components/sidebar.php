@@ -8,6 +8,11 @@
 					<li class="user">
 						<span<? if ($User->isTemporary()): ?> title="<? echo $this->localize('Temporary user name &ndash; to create a user account, hit \'Sign in\'!'); ?>"<? endif; ?>><? echo $User->getName(); ?></span>
 					</li>
+<? endif; ?>
+					<li class="control">
+						<a class="popup" href="<? echo $bp; ?>add-task" title="<? echo $this->localize('Add task'); ?>"><? echo $this->localize('Add task'); ?></a>
+					</li>
+<? if (isset($User)): ?>
 					<li class="control">
 <? if ($User->isTemporary()): ?>
 						<a class="popup" href="<? echo $bp; ?>sign-in" title="<? echo $this->localize('Sign in'); ?>"><? echo $this->localize('Sign in'); ?></a>
