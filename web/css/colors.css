@@ -1,0 +1,101 @@
+html {
+	background-color: #f3f3f3;
+}
+
+abbr, acronym {
+	border-color: #ccc;
+}
+
+#header, #footer {
+	background-color: #fff;
+}
+
+#sidebar {
+	/*-moz-box-shadow: -3px 0 3px -3px #ddd inset;
+	-webkit-box-shadow: -3px 0 3px -3px #ddd inset;
+	box-shadow: -3px 0 3px -3px #ddd inset;*/
+	border-color: #fff;
+}
+
+#controls .user {
+	color: #609;
+}
+
+#controls .control a {
+	color: #a0f;
+}
+
+#controls .control a:hover {
+	color: #e6f;
+}
+
+#menu .item a {
+	color: #666;
+	text-shadow: 0 1px 0 #ddd;
+}
+
+#menu .item a:hover {
+	background-color: #f9f9f9;
+}
+
+#menu .active a {
+	background-color: #e7e7e7;
+	color: #999;
+}
+
+#body h2, #body h3 {
+	color: #333;
+	text-shadow: 0 1px 0 #ddd;
+}
+
+#body a, #body em, #body strong {
+	color: #90c;
+}
+
+#body a:hover {
+	color: #a0f;
+}
+
+#body .items .expanded {
+	background-color: #e7e7e7;
+}
+
+#body .fieldset input {
+	background-color: #ccc;
+	color: #000;
+}
+
+#body .fieldset .submit, #popup .fieldset .submit {
+	background-color: #e6f;
+	color: #fff;
+}
+
+#copyright {
+	color: #666;
+}
+
+#copyright a {
+	color: #999;
+	text-shadow: 0 1px 0 #ddd;
+}
+
+#copyright a:hover {
+	color: #bbb;
+}
+
+#popup {
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 0 0 3px #ccc;
+	background-color: #fff;
+	border-color: #e6f;
+}
+
+#popup, #popup h2, #popup a {
+	color: #e6f;
+}
+
+#popup .fieldset input {
+	background-color: #ececec;
+	color: #666;
+}
