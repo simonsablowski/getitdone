@@ -10,37 +10,16 @@ abbr, acronym {
 	background-color: #fff;
 }
 
-#sidebar {
-	/*-moz-box-shadow: -3px 0 3px -3px #ddd inset;
-	-webkit-box-shadow: -3px 0 3px -3px #ddd inset;
-	box-shadow: -3px 0 3px -3px #ddd inset;*/
-	border-color: #fff;
-}
-
 #controls .user {
-	color: #609;
+	color: #069;
 }
 
 #controls .control a {
-	color: #a0f;
+	color: #06f;
 }
 
 #controls .control a:hover {
-	color: #e6f;
-}
-
-#menu .item a {
-	color: #666;
-	text-shadow: 0 1px 0 #ddd;
-}
-
-#menu .item a:hover {
-	background-color: #f9f9f9;
-}
-
-#menu .active a {
-	background-color: #e7e7e7;
-	color: #999;
+	color: #6af;
 }
 
 #body h2, #body h3 {
@@ -49,11 +28,11 @@ abbr, acronym {
 }
 
 #body a, #body em, #body strong {
-	color: #90c;
+	color: #09c;
 }
 
 #body a:hover {
-	color: #a0f;
+	color: #06f;
 }
 
 #body .items .expanded {
@@ -66,7 +45,7 @@ abbr, acronym {
 }
 
 #body .fieldset .submit, #popup .fieldset .submit {
-	background-color: #e6f;
+	background-color: #6af;
 	color: #fff;
 }
 
@@ -88,11 +67,11 @@ abbr, acronym {
 	-webkit-box-shadow: 0 0 3px #ccc;
 	box-shadow: 0 0 3px #ccc;
 	background-color: #fff;
-	border-color: #e6f;
+	border-color: #6af;
 }
 
 #popup, #popup h2, #popup a {
-	color: #e6f;
+	color: #6af;
 }
 
 #popup .fieldset input {

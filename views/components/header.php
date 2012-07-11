@@ -30,13 +30,34 @@
 	<body>
 		<div id="popup"></div>
 		<div id="document">
-<? if (isset($message) && !empty($message)): ?>
 			<div id="header">
+				<div id="logo">
+					<a href="<? echo $this->link(); ?>" title="<? echo $this->localize('getitdone'); ?>"><img src="<? echo $bp; ?>img/logo.png" alt="<? echo $this->localize('getitdone'); ?>" title="<? echo $this->localize('getitdone'); ?>"/></a>
+				</div>
+				<ul id="controls">
+<? if (isset($User)): ?>
+					<li class="user">
+						<span<? if ($User->isTemporary()): ?> title="<? echo $this->localize('Temporary user name &ndash; to create a user account, hit \'Sign in\'!'); ?>"<? endif; ?>><? echo $User->getName(); ?></span>
+					</li>
+<? endif; ?>
+					<li class="control">
+						<a class="popup" href="<? echo $this->link('add-task'); ?>" title="<? echo $this->localize('Add task'); ?>"><? echo $this->localize('Add task'); ?></a>
+					</li>
+<? if (isset($User)): ?>
+					<li class="control">
+<? if ($User->isTemporary()): ?>
+						<a class="popup" href="<? echo $this->link('sign-in'); ?>" title="<? echo $this->localize('Sign in'); ?>"><? echo $this->localize('Sign in'); ?></a>
+<? else: ?>
+						<a href="<? echo $this->link('sign-out'); ?>" title="<? echo $this->localize('Sign out'); ?>"><? echo $this->localize('Sign out'); ?></a>
+<? endif; ?>
+					</li>
+<? endif; ?>
+				</ul>
+<? if (isset($message) && !empty($message)): ?>
 				<div id="message">
 					<? echo $this->localize($message); ?>
 
 				</div>
-			</div>
 <? endif; ?>
-<? $this->includeComponent('sidebar.php'); ?>
+			</div>
 			<div id="content">

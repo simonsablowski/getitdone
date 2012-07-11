@@ -27,41 +27,31 @@ body > #document {
 	padding: 6px 12px;
 }
 
-#sidebar, #content {
-	float: left;
+#content {
 	padding-bottom: 30px;
 }
 
-#sidebar {
-	border-right: 2px solid;
-	height: 100%;
-	overflow: auto;
-	position: relative;
-	width: 198px;
+#logo, #logo img {
+	float: left;
+	height: 30px;
+	width: 30px;
 }
 
 #logo {
-	position: absolute;
-	width: 86px;
-}
-
-#logo img {
-	height: 66px;
-	padding: 10px;
-	width: 66px;
+	margin-left: 20px;
 }
 
 #controls {
-	height: 56px;
-	margin-left: 86px;
-	padding: 15px 10px;
+	float: left;
+	height: 30px;
+	width: 320px;
 }
 
 #controls .user, #controls .control {
 	font-weight: bold;
+	float: left;
 	list-style: none;
-	margin: 0;
-	overflow: hidden;
+	padding: 6px 12px;
 }
 
 #controls .control a {
@@ -78,7 +68,7 @@ body > #document {
 }
 
 #body h2 {
-	padding: 30px 20px 50px;
+	padding: 30px 20px 20px;
 	text-transform: uppercase;
 }
 
@@ -141,10 +131,10 @@ body > #document {
 
 #popup {
 	border: 2px solid;
-	left: 84px;
+	left: 175px;
 	line-height: 1;
 	position: fixed;
-	top: 23px;
+	top: 0;
 	z-index: 1;
 }
 
