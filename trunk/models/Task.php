@@ -1,6 +1,9 @@
 <?php
 
 class Task extends Model {
+	protected static $defaultSorting = array(
+		'created' => 'ascending'
+	);
 	protected $fields = array(
         'id',
         'title',
