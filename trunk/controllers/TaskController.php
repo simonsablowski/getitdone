@@ -5,7 +5,7 @@ class TaskController extends CustomController {
 		return array(
 			new TextField('title', 'Title', 255),
 			new TextField('description', 'Description', 255),
-            new OptionField('status', 'Status', array(
+            new OptionsField('status', 'Status', array(
                 new Option('open', 'Open', TRUE),
                 new Option('in-progress', 'In progress'),
                 new Option('resolved', 'Resolved'),

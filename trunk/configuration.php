@@ -4,7 +4,7 @@ $configuration = array();
 
 $configuration['pathApplication'] = dirname(__FILE__) . '/';
 
-$configuration['baseUrl'] = '/';
+$configuration['baseUrl'] = '/getitdone/';
 
 $configuration['includeDirectories'] = array(
 	$configuration['pathApplication'],
@@ -14,7 +14,7 @@ $configuration['includeDirectories'] = array(
 
 $configuration['Database'] = array(
 	'type' => 'MySql',
-	'host' => '127.0.0.1',
+	'host' => 'localhost',
 	'name' => 'getitdone',
 	'user' => 'root',
 	'password' => ''
@@ -25,7 +25,8 @@ $configuration['Request'] = array(
 	'defaultQuery' => 'Task/index',
 	'aliasQueries' => array(
 		'(sign)-in' => 'Authentication/$1In',
-		'(sign)-out' => 'Authentication/$1Out'
+		'(sign)-out' => 'Authentication/$1Out',
+		'(\w+)-task(.*)' => 'Task/$1$2'
 	)
 );
 
