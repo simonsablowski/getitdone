@@ -1,6 +1,7 @@
 <?php
 
 class Task extends Model {
+	protected static $defaultCondition = array();
 	protected static $defaultSorting = array(
 		'created' => 'ascending'
 	);
@@ -16,4 +17,12 @@ class Task extends Model {
         'title',
         'description'
 	);
+	
+	protected function prepareCreating() {
+		if ($this->isField('created')) $this->setData('created', 'NOW()');
+	}
+	
+	protected function prepareDeleting() {
+		$this->prepareUpdating();
+	}
 }
