@@ -34,8 +34,18 @@ function initializeExpandableElements() {
 	});
 }
 
+function sortTasks() {
+    $('.items .item').each(function(i, item) {
+        var parent = $('#' + $(item).attr('title') + ' .items');
+        if (parent) {
+            $(item).appendTo(parent);
+        }
+    });
+}
+
 $(document).ready(function() {	
 	initializePopup();
 	initializeExternalLinks();
 	initializeExpandableElements();
+    sortTasks();
 });

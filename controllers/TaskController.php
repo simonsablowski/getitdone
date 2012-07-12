@@ -2,21 +2,37 @@
 
 class TaskController extends CustomController {
 	protected $statusOptions = array(
-		'open' => 'Open',
-		'in-progress' => 'In progress',
-		'resolved' => 'Resolved',
-		'closed' => 'Closed'
+		array(
+            'name' => 'open',
+            'label' => 'Open',
+            'default' => TRUE
+        ),
+        array(
+            'name' => 'in-progress',
+            'label' => 'In progress',
+            'default' => FALSE
+        ),
+        array(
+            'name' => 'resolved',
+            'label' => 'Resolved',
+            'default' => FALSE
+        ),
+        array(
+            'name' => 'closed',
+            'label' => 'Closed',
+            'default' => FALSE
+        )
 	);
 	
 	public function getFields() {
 		return array(
 			new TextField('title', 'Title', 255),
 			new TextField('description', 'Description', 255),
-            new OptionsField('status', 'Status', array(
-                new Option('open', 'Open', TRUE),
-                new Option('in-progress', 'In progress'),
-                new Option('resolved', 'Resolved'),
-                new Option('closed', 'Closed')
+            new OptionsField('status', 'Status', array_map(
+                create_function(
+                    '$statusOption',
+                    'return new Option($statusOption[\'name\'], $statusOption[\'label\'], $statusOption[\'default\']);'
+                ), $this->getStatusOptions()
             ))
 		);
 	}

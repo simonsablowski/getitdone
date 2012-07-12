@@ -5,19 +5,19 @@
 
                     </h2>
                     <div class="columns">
-<? $n = 0; foreach ($statusOptions as $optionName => $optionLabel): ?>
-                        <div class="<? echo $n % 2 ? 'odd' : 'even'; ?> column">
+<? foreach ($statusOptions as $n => $statusOption): ?>
+                        <div id="<? echo $statusOption['name']; ?>" class="<? echo $n % 2 ? 'odd' : 'even'; ?> column">
                             <h3 class="title">
-                                <? echo $optionLabel; ?>
+                                <? echo $statusOption['label']; ?>
 
                             </h3>
-                            <div></div>
+                            <ul class="items"></ul>
                         </div>
-<? $n++; endforeach; ?>
+<? endforeach; ?>
                     </div>
                     <ul class="items">
 <? foreach ($Tasks as $n => $Task): ?>
-                        <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item <? echo $Task->getStatus(); ?>">
+                        <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item" title="<? echo $Task->getStatus(); ?>">
                             <h3 class="title expand">
                                 <? echo $Task->getTitle(); ?>
 
