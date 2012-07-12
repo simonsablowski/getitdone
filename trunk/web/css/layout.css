@@ -104,6 +104,10 @@ body > #document {
 	cursor: pointer;
 }
 
+#body .items .item .title {
+    padding: 0;
+}
+
 #body .items .item .title .date, #body .items .item .title .time {
 	float: right;
 	margin-left: 10px;
