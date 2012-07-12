@@ -35,8 +35,20 @@ abbr, acronym {
 	color: #06f;
 }
 
-#body .items .expanded {
-	background-color: #e7e7e7;
+#body .columns .even {
+	background-color: #fff;
+}
+
+#body .columns .odd {
+	background-color: #f9f9f9;
+}
+
+#body .items .item {
+	-moz-box-shadow: 0 0 1px #ccc;
+	-webkit-box-shadow: 0 0 1px #ccc;
+	box-shadow: 0 0 1px #ccc;
+	background-color: #ff6;
+	border-color: #990;
 }
 
 #body .fieldset input {

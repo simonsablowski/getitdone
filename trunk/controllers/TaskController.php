@@ -1,6 +1,13 @@
 <?php
 
 class TaskController extends CustomController {
+	protected $statusOptions = array(
+		'open' => 'Open',
+		'in-progress' => 'In progress',
+		'resolved' => 'Resolved',
+		'closed' => 'Closed'
+	);
+	
 	public function getFields() {
 		return array(
 			new TextField('title', 'Title', 255),
@@ -16,7 +23,8 @@ class TaskController extends CustomController {
 	
 	public function index() {
 		return $this->displayView('Task.index.php', array(
-			'Tasks' => Task::findAll()
+			'Tasks' => Task::findAll(),
+			'statusOptions' => $this->getStatusOptions()
 		));
 	}
 	
