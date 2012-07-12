@@ -14,11 +14,10 @@
                             <div></div>
                         </div>
 <? $n++; endforeach; ?>
-						<div class="clear"><!--  --></div>
                     </div>
                     <ul class="items">
 <? foreach ($Tasks as $n => $Task): ?>
-                        <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item">
+                        <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item <? echo $Task->getStatus(); ?>">
                             <h3 class="title expand">
                                 <? echo $Task->getTitle(); ?>
 

@@ -32,8 +32,9 @@ class TaskController extends CustomController {
 		if ($this->getRequest()->isSubmitted()) {
 			try {
 				$Task = new Task(array(
-					'title' => ($title = $this->getRequest()->getData('title')),
-					'description' => ($description = $this->getRequest()->getData('description'))
+					'title' => $this->getRequest()->getData('title'),
+					'description' => $this->getRequest()->getData('description'),
+					'status' => $this->getRequest()->getData('status')
 				));
 				$Task->create();
 				
