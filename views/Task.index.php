@@ -4,6 +4,18 @@
                         <? echo $this->localize('Tasks'); ?>
 
                     </h2>
+                    <div class="columns">
+<? $n = 0; foreach ($statusOptions as $optionName => $optionLabel): ?>
+                        <div class="<? echo $n % 2 ? 'odd' : 'even'; ?> column">
+                            <h3 class="title">
+                                <? echo $optionLabel; ?>
+
+                            </h3>
+                            <div></div>
+                        </div>
+<? $n++; endforeach; ?>
+						<div class="clear"><!--  --></div>
+                    </div>
                     <ul class="items">
 <? foreach ($Tasks as $n => $Task): ?>
                         <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item">
