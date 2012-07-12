@@ -14,7 +14,7 @@ $configuration['includeDirectories'] = array(
 
 $configuration['Database'] = array(
 	'type' => 'MySql',
-	'host' => 'localhost',
+	'host' => '127.0.0.1',
 	'name' => 'getitdone',
 	'user' => 'root',
 	'password' => ''
