@@ -15,7 +15,7 @@
                         </div>
 <? endforeach; ?>
                     </div>
-                    <ul class="items">
+                    <ul class="distributable-items">
 <? foreach ($Tasks as $n => $Task): ?>
                         <li class="<? echo $n % 2 ? 'odd' : 'even'; ?> item" title="<? echo $Task->getStatus(); ?>">
                             <h3 class="title expand">
