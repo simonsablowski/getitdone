@@ -24,7 +24,8 @@
 		<link href="<? echo $bp; ?>css/handheld.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 859px)"/>
 		<link href="<? echo $bp; ?>css/print.css" rel="stylesheet" type="text/css" media="print"/>
 		<link type="image/x-icon" href="<? echo $bp; ?>img/favicon.ico" rel="shortcut icon"/>
-		<script type="text/javascript" src="<? echo $bp; ?>js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="<? echo $bp; ?>js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="<? echo $bp; ?>js/jquery-ui-1.8.21.custom.min.js"></script>
 		<script type="text/javascript" src="<? echo $bp; ?>js/getitdone.js"></script>
 	</head>
 	<body>
