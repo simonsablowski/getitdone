@@ -47,7 +47,7 @@ body > #document {
 	width: 320px;
 }
 
-#controls .user, #controls .control {
+#controls .control {
 	font-weight: bold;
 	float: left;
 	list-style: none;
@@ -84,7 +84,6 @@ body > #document {
 
 #body .columns .column {
 	float: left;
-	width: 25%;
 }
 
 #body .columns .column .title {
@@ -135,7 +134,7 @@ body > #document {
 	padding: 30px 20px 0;
 }
 
-#body .fieldset {
+#body .fieldset, #body .content {
 	padding: 0 20px;
 }
 
@@ -154,15 +153,19 @@ body > #document {
 
 #popup {
 	border: 2px solid;
-	left: 175px;
+	left: 100px;
 	line-height: 1;
 	position: fixed;
 	top: 0;
 	z-index: 1;
 }
 
-#popup h2, #popup .fieldset {
+#popup h2, #popup .fieldset, #popup .content {
 	padding: 10px;
+}
+
+#popup .content p {
+	padding: 5px 0;
 }
 
 #popup h2 {

@@ -26,8 +26,10 @@ $configuration['Request'] = array(
 	'aliasQueries' => array(
 		'(sign)-in' => 'Authentication/$1In',
 		'(sign)-out' => 'Authentication/$1Out',
+		'account' => 'Authentication/index',
 		'(\w+)-task(.*)' => 'Task/$1$2'
 	)
 );
 
 $configuration['passwordSalt'] = '';
+$configuration['disableErrorHandler'] = TRUE;
