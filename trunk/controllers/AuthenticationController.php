@@ -8,6 +8,10 @@ class AuthenticationController extends CustomController {
 		);
 	}
 	
+	public function index() {
+		return $this->displayView($this->getViewFile('index'));
+	}
+	
 	public function signIn() {
 		$name = $this->getRequest()->getData('name');
 		$password = $this->getRequest()->getData('password');

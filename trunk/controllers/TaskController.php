@@ -3,8 +3,8 @@
 class TaskController extends CustomController {
 	protected $statusOptions = array(
 		array(
-            'name' => 'open',
-            'label' => 'Open',
+            'name' => 'to-do',
+            'label' => 'To do',
             'default' => TRUE
         ),
         array(
@@ -13,13 +13,8 @@ class TaskController extends CustomController {
             'default' => FALSE
         ),
         array(
-            'name' => 'resolved',
-            'label' => 'Resolved',
-            'default' => FALSE
-        ),
-        array(
-            'name' => 'closed',
-            'label' => 'Closed',
+            'name' => 'done',
+            'label' => 'Done',
             'default' => FALSE
         )
 	);

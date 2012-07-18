@@ -6,7 +6,8 @@
                     </h2>
                     <div class="columns">
 <? foreach ($statusOptions as $n => $statusOption): ?>
-                        <div id="<? echo $statusOption['name']; ?>" class="<? echo $n % 2 ? 'odd' : 'even'; ?> column">
+<? $m = count($statusOptions); $width = floor(100 / $m); if ($n + 1 == $m): $width = 100 - $n * $width; endif; ?>
+                        <div id="<? echo $statusOption['name']; ?>" class="<? echo $n % 2 ? 'odd' : 'even'; ?> column" style="width: <? echo $width; ?>%;">
                             <h3 class="title">
                                 <? echo $statusOption['label']; ?>
 
