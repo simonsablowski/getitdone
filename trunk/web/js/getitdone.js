@@ -26,7 +26,7 @@ function initializeExternalLinks() {
 function initializeExpandableElements() {
 	$('.expandable').hide();
 	
-	$('.expand, .collapse').dblclick(function(event) {
+	$('.expand, .collapse').click(function(event) {
 		$(this).parent().toggleClass('expanded');
 		$(this).toggleClass('expand').toggleClass('collapse');
 		$(this).siblings('.expandable').slideToggle(100);
@@ -49,10 +49,28 @@ function initializeDraggableItems() {
     });
 }
 
+function initializeItemCreation() {
+	$('.items').dblclick(function(event) {
+		var items = $(this);
+		var status = items.find('.item:first').attr('title');
+		var action = items.parents('form:first').attr('action');
+		var list = items.clone().load(action + ' .item', function() {
+			var item = $(list).find('.item:first');
+			var parent = item.find('[name="status"]').parent();
+			parent.prev().remove();
+			parent.remove();
+			item.find('form').append('<input type="hidden" name="status" value="' + status + '"/>');
+			item.appendTo(items);
+		});
+		event.preventDefault();
+	});
+}
+
 $(document).ready(function() {	
 	initializePopup();
 	initializeExternalLinks();
 	initializeExpandableElements();
     initializeItemDistribution();
     initializeDraggableItems();
+    initializeItemCreation();
 });

@@ -56,9 +56,14 @@ abbr, acronym {
 	color: #000;
 }
 
-#body .fieldset .submit, #popup .fieldset .submit {
+#body .fieldset .submit, #body .items .item .fieldset .submit, #popup .fieldset .submit {
 	background-color: #6af;
 	color: #fff;
+}
+
+#body .items .item .fieldset input {
+	background-color: #ff6;
+	border-color: #ccc;
 }
 
 #copyright {

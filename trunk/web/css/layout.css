@@ -44,7 +44,7 @@ body > #document {
 #controls {
 	float: left;
 	height: 30px;
-	width: 320px;
+	width: 120px;
 }
 
 #controls .control {
@@ -146,6 +146,20 @@ body > #document {
 	padding: 1px 2px;
 }
 
+#body .items .item .fieldset {
+	line-height: 1;
+	padding: 10px 0;
+}
+
+#body .items .item .fieldset input {
+	border: 1px solid;
+	margin: 5px 0;
+}
+
+#body .items .item .fieldset .submit {
+	border: 0 none;
+}
+
 #footer {
 	clear: both;
 	margin-top: -30px;
@@ -153,7 +167,7 @@ body > #document {
 
 #popup {
 	border: 2px solid;
-	left: 100px;
+	left: 0;
 	line-height: 1;
 	position: fixed;
 	top: 0;
