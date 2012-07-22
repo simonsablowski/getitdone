@@ -52,7 +52,7 @@ function initializeDraggableItems() {
 function initializeItemCreation() {
 	$('.items').dblclick(function(event) {
 		var items = $(this);
-		var status = items.find('.item:first').attr('title');
+		var status = items.parents('.column:first').attr('id');
 		var action = items.parents('form:first').attr('action');
 		var list = items.clone().load(action + ' .item', function() {
 			var item = $(list).find('.item:first');
