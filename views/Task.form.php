@@ -1,10 +1,10 @@
 <? $this->includeComponent('header.php'); ?>
 				<div id="body">
-					<h2>
+					<h2 class="title">
 						<? echo isset($title) ? $title : sprintf('%s %s', $this->localize(ucfirst($mode)), $this->localize(strtolower($ObjectName))); ?>
 
 					</h2>
-					<ul>
+					<ul class="content">
 						<li class="item">
 							<form action="<? echo $this->link($ObjectName . '/' . ($mode != 'update' ? $mode : sprintf('%s/%s', $mode, implode('/', $Object->getPrimaryKeyValue())))); ?>" method="post">
 								<fieldset class="fieldset">
