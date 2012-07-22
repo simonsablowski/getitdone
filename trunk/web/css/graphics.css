@@ -1,0 +1,10 @@
+#controls .account {
+	background: url('../img/account.png') 50% 50% no-repeat;
+	height: 30px;
+	text-indent: -999px;
+	width: 60px;
+}
+
+#trash {
+	background: url('../img/trash.png') 99% 50% no-repeat;
+}

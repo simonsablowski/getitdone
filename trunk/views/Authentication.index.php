@@ -8,10 +8,10 @@
 <? else: ?>
 <? $this->includeComponent('header.php'); ?>
                 <div id="body">
-                    <h2>
-                        <? echo $this->localize('User'); ?>
+					<h2 class="title">
+						<? echo $this->localize('User'); ?>
 
-                    </h2>
+					</h2>
 					<div class="content">
 						<p <? if ($User->isTemporary()): ?> title="<? echo $this->localize('Temporary user name &ndash; to create a user account, hit \'Sign in\'!'); ?>"<? endif; ?>>
 							<? echo $User->getName(); ?>

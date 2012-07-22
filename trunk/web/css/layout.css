@@ -23,35 +23,31 @@ body > #document {
 	width: 100%;
 }
 
+#header {
+	border-bottom: 2px solid;
+}
+
 #message, #copyright {
-	padding: 6px 12px;
+	padding: 6px 15px;
+}
+
+#message {
+	text-align: right;
 }
 
 #content {
 	padding-bottom: 30px;
 }
 
-#logo, #logo img {
-	float: left;
-	height: 30px;
-	width: 30px;
-}
-
-#logo {
-	margin-left: 20px;
-}
-
 #controls {
 	float: left;
 	height: 30px;
-	width: 120px;
 }
 
 #controls .control {
 	font-weight: bold;
 	float: left;
 	list-style: none;
-	padding: 6px 12px;
 }
 
 #controls .control a {
@@ -63,7 +59,7 @@ body > #document {
 	padding-bottom: 30px;
 }
 
-#body {
+#body, #popup {
 	line-height: 2.0;
 }
 
@@ -76,29 +72,42 @@ body > #document {
 	white-space: nowrap;
 }
 
+#body input {
+	border: 0 none;
+	border-top: 2px solid;
+}
+
+#body .title {
+	padding: 15px 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#body .content {
+	border-bottom: 5px solid;
+    padding: 15px 30px;
+}
+
 #body .columns {
-	float: left;
-	margin-bottom: 30px;
+	display: table;
+	padding: 0;
 	width: 100%;
 }
 
 #body .columns .column {
-	float: left;
-}
-
-#body .columns .column .title {
-	padding: 10px 20px;
+	display: table-cell;
 }
 
 #body .items {
 	clear: both;
-    padding-bottom: 15px;
+    padding: 30px 15px;
 }
 
 #body .items .item {
+	border-bottom: 2px solid;
     cursor: move;
-	margin: 0 10px 10px 10px;
-	padding: 0 20px;
+	margin-bottom: 10px;
+	padding: 5px 15px;
 }
 
 #body .items .item .expand, #body .items .item .collapse {
@@ -107,7 +116,9 @@ body > #document {
 
 #body .items .item .title {
     display: inline;
+	font-weight: bold;
     padding: 0;
+	text-transform: none;
 }
 
 #body .items .item .title .date, #body .items .item .title .time {
@@ -117,47 +128,32 @@ body > #document {
 
 #body .items .expanded {
 	overflow: hidden;
-	margin-bottom: 12px;
-	padding: 5px 20px;
 }
 
-#body .items .expanded .title {
-	font-weight: bold;
+#trash {
+    height: 90px;
 }
 
-#body .items .expanded table {
-	border-collapse: separate;
-	border-spacing: 10px;
+#trash .items .item {
+	display: none;
 }
 
 #body .message {
 	padding: 30px 20px 0;
 }
 
-#body .fieldset, #body .content {
-	padding: 0 20px;
-}
-
-#body .fieldset input, #popup .fieldset input {
+#body .fieldset .submit {
 	border: 0 none;
-}
-
-#body .fieldset .submit, #popup .fieldset .submit {
-	padding: 1px 2px;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 #body .items .item .fieldset {
-	line-height: 1;
 	padding: 10px 0;
 }
 
 #body .items .item .fieldset input {
-	border: 1px solid;
 	margin: 5px 0;
-}
-
-#body .items .item .fieldset .submit {
-	border: 0 none;
 }
 
 #footer {
@@ -166,37 +162,40 @@ body > #document {
 }
 
 #popup {
-	border: 2px solid;
-	left: 0;
-	line-height: 1;
+	border-bottom: 2px solid;
+	left: 60px;
 	position: fixed;
 	top: 0;
 	z-index: 1;
 }
 
-#popup h2, #popup .fieldset, #popup .content {
-	padding: 10px;
+#popup .fieldset, #popup .content {
+	padding: 17px;
+}
+
+#popup .title {
+	font-weight: bold;
+	padding: 2px 15px;
+	text-transform: uppercase;
 }
 
 #popup .content p {
-	padding: 5px 0;
-}
-
-#popup h2 {
-	font-weight: bold;
+	margin-bottom: 5px;
 }
 
 #popup .fieldset input {
 	margin: 5px 0;
 }
 
-#popup .fieldset .close {
-	line-height: 2.2;
-}
-
 #popup .fieldset .submit {
+	border: 0 none;
 	cursor: pointer;
 	float: right;
+	font-weight: bold;
+}
+
+#popup .fieldset .close {
+	line-height: 2.2;
 }
 
 #body .close {
