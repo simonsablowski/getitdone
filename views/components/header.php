@@ -32,10 +32,7 @@
 		<div id="document">
 			<div id="header">
 				<ul id="controls">
-					<li class="control">
-						<a href="<? echo $this->link(); ?>" title="<? echo $this->localize('Get it done!'); ?>"><? echo $this->localize('Get it done!'); ?></a>
-					</li>
-					<li class="control">
+					<li class="control account">
 						<a class="popup" href="<? echo $this->link('account'); ?>" title="<? echo $this->localize('Your account'); ?>"><? echo $this->localize('Your account'); ?></a>
 					</li>
 				</ul>
